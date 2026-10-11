@@ -12,9 +12,36 @@ const PARTY_START = Date.UTC(2026, 10, 1, 1, 30);
 // Set to false to turn off falling confetti on the cover
 const CONFETTI = true;
 
+// Paste your Google Apps Script web-app URL here (see wishes-sheet.gs)
+const WISHES_URL = '';
+
 // ─── Guest name from URL ──────────────────────────────────
 const slug = decodeURIComponent(location.pathname.split('/').filter(Boolean).pop() || '').toLowerCase();
-document.getElementById('guest-name').textContent = GUESTS[slug] || 'friend';
+const guestName = GUESTS[slug] || 'friend';
+document.getElementById('guest-name').textContent = guestName;
+
+// ─── Leave a wish ─────────────────────────────────────────
+const wishForm = document.getElementById('wish-form');
+const wishText = document.getElementById('wish-text');
+const wishBtn = document.getElementById('wish-btn');
+document.getElementById('wish-name').textContent = guestName;
+document.getElementById('wish-thanks-name').textContent = guestName;
+wishText.addEventListener('input', () => { wishBtn.disabled = !wishText.value.trim(); });
+wishForm.addEventListener('submit', async e => {
+  e.preventDefault();
+  const wish = wishText.value.trim();
+  if (!wish) return;
+  wishBtn.disabled = true; wishBtn.textContent = 'SENDING…';
+  document.getElementById('wish-error').hidden = true;
+  try {
+    if (WISHES_URL) await fetch(WISHES_URL, { method: 'POST', mode: 'no-cors', body: new URLSearchParams({ code: slug, name: guestName, wish }) });
+    wishForm.hidden = true;
+    document.getElementById('wish-thanks').hidden = false;
+  } catch (err) {
+    wishBtn.disabled = false; wishBtn.textContent = 'SEND WISH ♡';
+    document.getElementById('wish-error').hidden = false;
+  }
+});
 
 // ─── Envelope ─────────────────────────────────────────────
 const envelope = document.getElementById('envelope');
