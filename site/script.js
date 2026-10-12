@@ -1,11 +1,3 @@
-// ─── Guest list ───────────────────────────────────────────
-// Link format: yourdomain.com/<code>  →  name shown in the letter
-// Unknown or missing codes show "Dear friend,"
-const GUESTS = {
-  'k7q-tanvi': 'Tanvi',
-  'm2x-rohan': 'Rohan',
-};
-
 // Countdown target: 31 Oct 2026, 6:30 PM Pacific (= 1 Nov 01:30 UTC)
 const PARTY_START = Date.UTC(2026, 10, 1, 1, 30);
 
@@ -15,10 +7,7 @@ const CONFETTI = true;
 // Paste your Google Apps Script web-app URL here (see wishes-sheet.gs)
 const WISHES_URL = 'https://script.google.com/macros/s/AKfycbyXijmPb3zYLHtFtZfU39hI2mIZuMAb1-zqYuVGhZ-dgFSIfh_PU10Q9erhlpiouJoFpw/exec';
 
-// ─── Guest name from URL ──────────────────────────────────
-const slug = decodeURIComponent(location.pathname.split('/').filter(Boolean).pop() || '').toLowerCase();
-const guestName = GUESTS[slug] || 'friend';
-document.getElementById('guest-name').textContent = guestName;
+const guestName = 'friend';
 
 // ─── Leave a wish ─────────────────────────────────────────
 const wishForm = document.getElementById('wish-form');
