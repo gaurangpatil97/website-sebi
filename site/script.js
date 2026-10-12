@@ -13,7 +13,7 @@ const PARTY_START = Date.UTC(2026, 10, 1, 1, 30);
 const CONFETTI = true;
 
 // Paste your Google Apps Script web-app URL here (see wishes-sheet.gs)
-const WISHES_URL = '';
+const WISHES_URL = 'https://script.google.com/macros/s/AKfycbyXijmPb3zYLHtFtZfU39hI2mIZuMAb1-zqYuVGhZ-dgFSIfh_PU10Q9erhlpiouJoFpw/exec';
 
 // ─── Guest name from URL ──────────────────────────────────
 const slug = decodeURIComponent(location.pathname.split('/').filter(Boolean).pop() || '').toLowerCase();
@@ -34,7 +34,7 @@ wishForm.addEventListener('submit', async e => {
   wishBtn.disabled = true; wishBtn.textContent = 'SENDING…';
   document.getElementById('wish-error').hidden = true;
   try {
-    if (WISHES_URL) await fetch(WISHES_URL, { method: 'POST', mode: 'no-cors', body: new URLSearchParams({ code: slug, name: guestName, wish }) });
+    if (WISHES_URL) await fetch(WISHES_URL, { method: 'POST', mode: 'no-cors', body: new URLSearchParams({ name: guestName, wish }) });
     wishForm.hidden = true;
     document.getElementById('wish-thanks').hidden = false;
   } catch (err) {
