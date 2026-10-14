@@ -1,0 +1,192 @@
+[
+  {
+    "code": "nbl",
+    "name": "Nabeel",
+    "route": "nbl-nabeel"
+  },
+  {
+    "code": "srk",
+    "name": "Shrinks",
+    "route": "srk-shrinks"
+  },
+  {
+    "code": "swr",
+    "name": "Swaraj",
+    "route": "swr-swaraj"
+  },
+  {
+    "code": "ady",
+    "name": "Adyasha",
+    "route": "ady-adyasha"
+  },
+  {
+    "code": "atr",
+    "name": "Atharva Raje",
+    "route": "atr-atharva-raje"
+  },
+  {
+    "code": "knd",
+    "name": "Kundan",
+    "route": "knd-kundan"
+  },
+  {
+    "code": "vrn",
+    "name": "Vrinda",
+    "route": "vrn-vrinda"
+  },
+  {
+    "code": "rjl",
+    "name": "Rijul",
+    "route": "rjl-rijul"
+  },
+  {
+    "code": "prc",
+    "name": "Prachi",
+    "route": "prc-prachi"
+  },
+  {
+    "code": "prj",
+    "name": "Pranjani",
+    "route": "prj-pranjani"
+  },
+  {
+    "code": "sry",
+    "name": "Shreya",
+    "route": "sry-shreya"
+  },
+  {
+    "code": "ysh",
+    "name": "Yash",
+    "route": "ysh-yash"
+  },
+  {
+    "code": "srt",
+    "name": "Shruti",
+    "route": "srt-shruti"
+  },
+  {
+    "code": "ays",
+    "name": "Aayush",
+    "route": "ays-aayush"
+  },
+  {
+    "code": "rhp",
+    "name": "Rohan Patil",
+    "route": "rhp-rohan-patil"
+  },
+  {
+    "code": "shv",
+    "name": "Shivani",
+    "route": "shv-shivani"
+  },
+  {
+    "code": "mtw",
+    "name": "Matthew",
+    "route": "mtw-matthew"
+  },
+  {
+    "code": "rch",
+    "name": "Rochelle",
+    "route": "rch-rochelle"
+  },
+  {
+    "code": "raj",
+    "name": "Raj",
+    "route": "raj-raj"
+  },
+  {
+    "code": "shb",
+    "name": "Shubham",
+    "route": "shb-shubham"
+  },
+  {
+    "code": "vdt",
+    "name": "Vedant",
+    "route": "vdt-vedant"
+  },
+  {
+    "code": "mns",
+    "name": "Maanas",
+    "route": "mns-maanas"
+  },
+  {
+    "code": "ans",
+    "name": "Anish",
+    "route": "ans-anish"
+  },
+  {
+    "code": "ank",
+    "name": "Anushka",
+    "route": "ank-anushka"
+  },
+  {
+    "code": "adt",
+    "name": "Aditya",
+    "route": "adt-aditya"
+  },
+  {
+    "code": "nck",
+    "name": "Nachiket",
+    "route": "nck-nachiket"
+  },
+  {
+    "code": "faz",
+    "name": "Faiz",
+    "route": "faz-faiz"
+  },
+  {
+    "code": "dhr",
+    "name": "Dhruv",
+    "route": "dhr-dhruv"
+  },
+  {
+    "code": "tnq",
+    "name": "Tanishq",
+    "route": "tnq-tanishq"
+  },
+  {
+    "code": "srn",
+    "name": "Shrunali",
+    "route": "srn-shrunali"
+  },
+  {
+    "code": "aar",
+    "name": "Aarish",
+    "route": "aar-aarish"
+  },
+  {
+    "code": "wls",
+    "name": "Welisa",
+    "route": "wls-welisa"
+  },
+  {
+    "code": "hrm",
+    "name": "Haramrit",
+    "route": "hrm-haramrit"
+  },
+  {
+    "code": "tjs",
+    "name": "Tejas",
+    "route": "tjs-tejas"
+  },
+  {
+    "code": "rdh",
+    "name": "Riddhi",
+    "route": "rdh-riddhi"
+  },
+  {
+    "code": "nhr",
+    "name": "Nihar",
+    "route": "nhr-nihar"
+  },
+  {
+    "code": "mhk",
+    "name": "Mahek",
+    "route": "mhk-mahek"
+  },
+  {
+    "code": "prd",
+    "name": "Prada",
+    "route": "prd-prada"
+  }
+]
