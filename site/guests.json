@@ -188,5 +188,10 @@
     "code": "prd",
     "name": "Prada",
     "route": "prd-prada"
+  },
+  {
+    "code": "cutie",
+    "name": "Tanvi",
+    "route": "cutie-tanvi"
   }
 ]
