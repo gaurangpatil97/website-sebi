@@ -2,7 +2,7 @@
 const PARTY_START = Date.UTC(2026, 9, 31, 22, 0);
 
 // Paste your Google Apps Script web-app URL here (see wishes-sheet.gs)
-const WISHES_URL = '';
+const WISHES_URL = 'https://script.google.com/macros/s/AKfycbyXijmPb3zYLHtFtZfU39hI2mIZuMAb1-zqYuVGhZ-dgFSIfh_PU10Q9erhlpiouJoFpw/exec';
 
 // ─── Guest data & Routing ─────────────────────────────────
 let guestName = 'friend';
