@@ -1,13 +1,12 @@
 // Countdown target: 31 Oct 2026, 6:30 PM Pacific (= 1 Nov 01:30 UTC)
 const PARTY_START = Date.UTC(2026, 10, 1, 1, 30);
 
-// Set to false to turn off falling confetti on the cover
-const CONFETTI = true;
-
 // Paste your Google Apps Script web-app URL here (see wishes-sheet.gs)
-const WISHES_URL = 'https://script.google.com/macros/s/AKfycbyXijmPb3zYLHtFtZfU39hI2mIZuMAb1-zqYuVGhZ-dgFSIfh_PU10Q9erhlpiouJoFpw/exec';
+const WISHES_URL = '';
 
+// ─── Guest name ───────────────────────────────────────────
 const guestName = 'friend';
+document.getElementById('guest-name').textContent = guestName;
 
 // ─── Leave a wish ─────────────────────────────────────────
 const wishForm = document.getElementById('wish-form');
@@ -55,20 +54,8 @@ function tick() {
 tick();
 setInterval(tick, 1000);
 
-// ─── Confetti ─────────────────────────────────────────────
-if (CONFETTI) {
-  const colors = ['var(--p)', 'var(--env)', 'var(--pink-soft)', 'var(--gold)', 'var(--t1)'];
-  const box = document.getElementById('confetti');
-  const r = (a, b) => a + Math.random() * (b - a);
-  for (let i = 0; i < 28; i++) {
-    const s = document.createElement('span');
-    const w = r(5, 9), round = Math.random() < 0.35;
-    Object.assign(s.style, {
-      left: r(0, 100) + '%', width: w + 'px', height: (round ? w : r(5, 14)) + 'px',
-      borderRadius: round ? '50%' : '2px',
-      background: colors[Math.floor(Math.random() * colors.length)],
-      animationDuration: r(7, 13) + 's', animationDelay: -r(0, 13) + 's',
-    });
-    box.appendChild(s);
-  }
-}
+// ─── Intro splash ─────────────────────────────────────────
+const intro = document.getElementById('intro');
+const hideIntro = () => { intro.classList.add('fade'); setTimeout(() => intro.remove(), 600); };
+const introTimer = setTimeout(hideIntro, 2800);
+intro.addEventListener('click', () => { clearTimeout(introTimer); hideIntro(); });
