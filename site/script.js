@@ -1,5 +1,5 @@
-// Countdown target: 31 Oct 2026, 6:30 PM Pacific (= 1 Nov 01:30 UTC)
-const PARTY_START = Date.UTC(2026, 10, 1, 1, 30);
+// Countdown target: 31 Oct 2026, 3:00 PM Pacific (= 31 Oct 22:00 UTC)
+const PARTY_START = Date.UTC(2026, 9, 31, 22, 0);
 
 // Paste your Google Apps Script web-app URL here (see wishes-sheet.gs)
 const WISHES_URL = '';

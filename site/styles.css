@@ -118,9 +118,9 @@ section { display: flex; flex-direction: column; align-items: center; text-align
 .venue-details { display: flex; flex-direction: column; align-items: center; gap: 10px; }
 .city { display: flex; align-items: center; gap: 8px; font-family: var(--serif); font-size: 29px; }
 .city span { color: var(--p); font-size: 18px; }
-.venue-name { font-family: var(--serif); font-size: 20px; }
-.venue-name small { font-size: 17px; color: var(--mut); }
-.time { font-size: 12px; color: var(--mut); }
+.venue-name { font-family: var(--serif); font-size: 30px; line-height: 1.2; }
+.venue-name small { display: inline-block; margin-top: 4px; font-size: 20px; color: var(--mut); }
+.time { margin-top: 2px; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; color: var(--p); }
 .secret-card { position: relative; width: 100%; margin-top: 30px; background: var(--paper); border-radius: 20px; padding: 38px 26px 26px; display: flex; flex-direction: column; align-items: center; gap: 10px; box-shadow: 0 10px 28px rgba(53,76,86,.08); }
 .secret-badge { position: absolute; top: -22px; left: 50%; margin-left: -22px; width: 44px; height: 44px; border-radius: 50%; background: var(--p); border: 3px solid var(--bg2); display: flex; align-items: center; justify-content: center; font-size: 20px; }
 .secret-title { font-family: var(--script); font-size: 32px; line-height: 1.1; color: var(--p); }
@@ -176,3 +176,51 @@ section { display: flex; flex-direction: column; align-items: center; text-align
 .intro-shh { font-family: var(--script); font-size: 84px; line-height: 1; color: var(--p); animation: bubblePop .8s cubic-bezier(.3,1.5,.5,1) .2s both; }
 .intro-sub { font-size: 12px; letter-spacing: 3px; font-weight: 700; color: var(--ink); animation: bubblePop .7s cubic-bezier(.3,1.5,.5,1) .9s both; }
 .intro-heart { font-size: 18px; color: var(--pink); animation: floaty 2.4s ease-in-out 1.4s infinite; }
+
+/* ─── Tablet & desktop ─────────────────────────────────── */
+@media (min-width: 768px) {
+  body { background: var(--bg); }
+  .invite { max-width: 640px; box-shadow: none; }
+  .hero { border-radius: 24px; margin: 0 16px; }
+  .intro { max-width: none; }
+
+  .nav { height: 76px; padding: 0 36px; }
+  .monogram { font-size: 28px; }
+  .nav-link { font-size: 12px; }
+
+  .hero-img { aspect-ratio: 5 / 4; object-position: 50% 20%; }
+  .hero-text { padding-top: 96px; }
+  .name { font-size: 66px; }
+  .amp { font-size: 46px; }
+  .hero-sub { font-size: 28px; }
+
+  .title, .venue-title { font-size: 42px; }
+  .venue-title { max-width: 460px; }
+  .label { font-size: 12px; }
+  .muted { font-size: 14px; max-width: 420px; }
+  .script-title { font-size: 40px; }
+  .line { font-size: 24px; }
+  .script { font-size: 38px; }
+  .join { font-size: 13px; }
+
+  .letter-section { padding: 44px 60px 64px; }
+  .envelope { max-width: 460px; }
+  .letter-body { font-size: 20px; }
+  .cd-card { width: 80px; height: 96px; }
+  .cd-card b { font-size: 50px; }
+
+  .banner { font-size: 12px; letter-spacing: 2px; padding: 14px 8px; }
+
+  .venue, .rsvp, .dress, .closing { padding-left: 60px; padding-right: 60px; }
+  .venue-img { max-width: 480px; }
+  .secret-card { max-width: 460px; }
+  .message { max-width: 400px; }
+  .lead { font-size: 22px; max-width: 440px; }
+  .wish-form, .wish-thanks { max-width: 420px; }
+  .closing-line { font-size: 26px; }
+  .ps { max-width: 440px; font-size: 13px; }
+}
+
+@media (min-width: 1200px) {
+  .invite { max-width: 720px; }
+}
