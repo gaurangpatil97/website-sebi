@@ -30,22 +30,31 @@ function setGuest(name, code) {
   if (thanksEl) thanksEl.textContent = guestName;
 }
 
-const slug = getSlug();
+// One-way hash verification (keeps invite links completely private from Network tab & sources)
+function hashRoute(s) {
+  let h = 5381;
+  for (let i = 0; i < s.length; i++) {
+    h = ((h << 5) + h) + s.charCodeAt(i);
+    h |= 0;
+  }
+  return (h >>> 0).toString(36);
+}
 
-// Load guests from guests.json
-fetch('guests.json')
-  .then(res => res.json())
-  .then(guests => {
-    const match = guests.find(g =>
-      g.route.toLowerCase() === slug ||
-      g.code.toLowerCase() === slug ||
-      g.name.toLowerCase() === slug
-    );
-    if (match) {
-      setGuest(match.name, match.code);
-    }
-  })
-  .catch(err => console.warn('Could not load guests.json', err));
+const VALID_INVITES = new Set([
+  '1iqleyd','srav5w','1ylp02e','1fuz7sb','2e6qq7','1jbi8i8','75j964','13uilk0',
+  '1ksm65q','1ot250x','cfian0','1d6p3ob','13tjpey','qhftuy','etbim3','hr012t',
+  '1s700zo','p2ib5p','epv3jg','au4buf','ir4ttu','1bbh2oh','17uimg7','1767ytz',
+  '1gmn7vr','1g5kj79','1skqflp','ab99fd','1muvnzx','t82aln','11lleta','g3zbh',
+  '25bl2p','14xy21m','6gnazo','1dlcqbw','9st2wo','18lqwlc','1njin0u'
+]);
+
+const slug = getSlug();
+if (slug && VALID_INVITES.has(hashRoute(slug))) {
+  const parts = slug.split('-');
+  const code = parts[0];
+  const name = parts.slice(1).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+  setGuest(name, code);
+}
 
 // ─── Leave a wish ─────────────────────────────────────────
 const wishForm = document.getElementById('wish-form');
