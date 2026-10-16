@@ -1,7 +1,7 @@
 {
-  "cleanUrls": true,
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
-    { "source": "/gp-tp-links-guests", "destination": "/gp-tp-links-guests.html" },
-    { "source": "/:slug", "destination": "/index.html" }
+    { "source": "/gp-tp-links-guests", "destination": "/gp-tp-links-guests/index.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
