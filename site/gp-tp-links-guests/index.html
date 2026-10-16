@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guest Links Directory · Janhavi &amp; Harshin</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Great+Vibes&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --p: #628a9c;
+      --p-dark: #4b6f7f;
+      --ink: #354c56;
+      --mut: #697a81;
+      --bg: #faf8f3;
+      --bg2: #eef4f6;
+      --paper: #fffefb;
+      --border: #dbe4e7;
+      --pink: #d9788f;
+      --pink-soft: #f4dce2;
+      --gold: #b38b4d;
+      --success: #3f8a65;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --script: 'Great Vibes', cursive;
+      --sans: Inter, system-ui, -apple-system, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #e9eef0;
+      font-family: var(--sans);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      padding: 24px 12px 60px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      background: var(--bg);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(53, 76, 86, 0.12);
+      border: 1px solid var(--border);
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(180deg, #eef5f8 0%, var(--bg) 100%);
+      padding: 36px 24px 28px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--p);
+      color: #fff;
+      font-size: 10px;
+      letter-spacing: 2px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(98, 138, 156, 0.25);
+    }
+
+    .title {
+      font-family: var(--serif);
+      font-size: 34px;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-family: var(--script);
+      font-size: 28px;
+      color: var(--p);
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+
+    .domain-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--mut);
+      background: var(--paper);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 100px;
+    }
+
+    .domain-pill strong {
+      color: var(--p);
+      font-weight: 600;
+    }
+
+    /* Controls */
+    .controls {
+      padding: 20px 24px;
+      background: var(--paper);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .search-bar {
+      position: relative;
+      width: 100%;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 12px 16px 12px 42px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      font-size: 14px;
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--ink);
+      transition: all 0.2s ease;
+      outline: none;
+    }
+
+    .search-input:focus {
+      background: #fff;
+      border-color: var(--p);
+      box-shadow: 0 0 0 3px rgba(98, 138, 156, 0.15);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--mut);
+      font-size: 16px;
+      pointer-events: none;
+    }
+
+    .actions-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .count-label {
+      font-size: 12px;
+      color: var(--mut);
+      font-weight: 500;
+    }
+
+    .btn-copy-all {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--p);
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-copy-all:hover {
+      background: var(--p-dark);
+      transform: translateY(-1px);
+    }
+
+    /* Guest Cards List */
+    .guest-list {
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .guest-card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .guest-card:hover {
+      border-color: var(--p);
+      box-shadow: 0 6px 18px rgba(98, 138, 156, 0.1);
+      transform: translateY(-1px);
+    }
+
+    .guest-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .guest-name-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .guest-name {
+      font-family: var(--serif);
+      font-size: 21px;
+      font-weight: 600;
+      color: var(--ink);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .guest-code {
+      font-size: 11px;
+      font-family: var(--sans);
+      color: var(--mut);
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      padding: 1px 7px;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    .guest-url {
+      font-size: 12px;
+      color: var(--mut);
+      word-break: break-all;
+      display: block;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .guest-url:hover {
+      color: var(--p);
+    }
+
+    .guest-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.15s ease;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--ink);
+    }
+
+    .btn-action:hover {
+      background: var(--bg2);
+      border-color: var(--p);
+      color: var(--p);
+    }
+
+    .btn-copy {
+      background: var(--bg2);
+      color: var(--p);
+      border-color: rgba(98, 138, 156, 0.25);
+      font-weight: 600;
+    }
+
+    .btn-copy:hover {
+      background: var(--p);
+      color: #fff;
+      border-color: var(--p);
+    }
+
+    .btn-copy.copied {
+      background: var(--success) !important;
+      color: #fff !important;
+      border-color: var(--success) !important;
+    }
+
+    .btn-wa {
+      color: #25d366;
+      border-color: rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-wa:hover {
+      background: #25d366;
+      color: #fff;
+      border-color: #25d366;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--ink);
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 500;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+      z-index: 1000;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--mut);
+      font-size: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 540px) {
+      body { padding: 12px 6px 40px; }
+      .header { padding: 28px 16px 22px; }
+      .title { font-size: 28px; }
+      .subtitle { font-size: 24px; }
+      .controls { padding: 14px 16px; }
+      .guest-list { padding: 14px 16px; }
+      .guest-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+      }
+      .guest-actions {
+        justify-content: flex-end;
+        width: 100%;
+      }
+      .btn-action {
+        flex: 1;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="badge">GP &amp; TP Secret Hub 🤫</div>
+      <h1 class="title">Guest Invitation Links</h1>
+      <div class="subtitle">Janhavi &amp; Harshin’s Surprise Celebration</div>
+      <div class="domain-pill">
+        <span>Base Domain:</span>
+        <strong id="display-domain">janhaviharshin.com</strong>
+      </div>
+    </header>
+
+    <div class="controls">
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search" class="search-input" placeholder="Search by guest name or code (e.g. Nabeel, nbl)…" autocomplete="off" />
+      </div>
+      <div class="actions-bar">
+        <span class="count-label" id="count-label">Showing all 39 guests</span>
+        <button class="btn-copy-all" id="btn-copy-all">
+          <span>📋 Copy All 39 Links</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="guest-list" id="guest-list">
+      <!-- Guest cards rendered via JavaScript -->
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Link copied to clipboard! ✓</div>
+
+  <script>
+    const BASE_URL = 'https://janhaviharshin.com';
+
+    const GUESTS = [
+      { "code": "nbl", "name": "Nabeel", "route": "nbl-nabeel" },
+      { "code": "srk", "name": "Shrinks", "route": "srk-shrinks" },
+      { "code": "swr", "name": "Swaraj", "route": "swr-swaraj" },
+      { "code": "ady", "name": "Adyasha", "route": "ady-adyasha" },
+      { "code": "atr", "name": "Atharva Raje", "route": "atr-atharva-raje" },
+      { "code": "knd", "name": "Kundan", "route": "knd-kundan" },
+      { "code": "vrn", "name": "Vrinda", "route": "vrn-vrinda" },
+      { "code": "rjl", "name": "Rijul", "route": "rjl-rijul" },
+      { "code": "prc", "name": "Prachi", "route": "prc-prachi" },
+      { "code": "prj", "name": "Pranjani", "route": "prj-pranjani" },
+      { "code": "sry", "name": "Shreya", "route": "sry-shreya" },
+      { "code": "ysh", "name": "Yash", "route": "ysh-yash" },
+      { "code": "srt", "name": "Shruti", "route": "srt-shruti" },
+      { "code": "ays", "name": "Aayush", "route": "ays-aayush" },
+      { "code": "rhp", "name": "Rohan Patil", "route": "rhp-rohan-patil" },
+      { "code": "shv", "name": "Shivani", "route": "shv-shivani" },
+      { "code": "mtw", "name": "Matthew", "route": "mtw-matthew" },
+      { "code": "rch", "name": "Rochelle", "route": "rch-rochelle" },
+      { "code": "raj", "name": "Raj", "route": "raj-raj" },
+      { "code": "shb", "name": "Shubham", "route": "shb-shubham" },
+      { "code": "vdt", "name": "Vedant", "route": "vdt-vedant" },
+      { "code": "mns", "name": "Maanas", "route": "mns-maanas" },
+      { "code": "ans", "name": "Anish", "route": "ans-anish" },
+      { "code": "ank", "name": "Anushka", "route": "ank-anushka" },
+      { "code": "adt", "name": "Aditya", "route": "adt-aditya" },
+      { "code": "nck", "name": "Nachiket", "route": "nck-nachiket" },
+      { "code": "faz", "name": "Faiz", "route": "faz-faiz" },
+      { "code": "dhr", "name": "Dhruv", "route": "dhr-dhruv" },
+      { "code": "tnq", "name": "Tanishq", "route": "tnq-tanishq" },
+      { "code": "srn", "name": "Shrunali", "route": "srn-shrunali" },
+      { "code": "aar", "name": "Aarish", "route": "aar-aarish" },
+      { "code": "wls", "name": "Welisa", "route": "wls-welisa" },
+      { "code": "hrm", "name": "Haramrit", "route": "hrm-haramrit" },
+      { "code": "tjs", "name": "Tejas", "route": "tjs-tejas" },
+      { "code": "rdh", "name": "Riddhi", "route": "rdh-riddhi" },
+      { "code": "nhr", "name": "Nihar", "route": "nhr-nihar" },
+      { "code": "mhk", "name": "Mahek", "route": "mhk-mahek" },
+      { "code": "prd", "name": "Prada", "route": "prd-prada" },
+      { "code": "cutie", "name": "Tanvi", "route": "cutie-tanvi" }
+    ];
+
+    const guestListEl = document.getElementById('guest-list');
+    const searchInput = document.getElementById('search');
+    const countLabel = document.getElementById('count-label');
+    const btnCopyAll = document.getElementById('btn-copy-all');
+    const toast = document.getElementById('toast');
+    let toastTimeout;
+
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add('show');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => toast.classList.remove('show'), 2200);
+    }
+
+    function copyToClipboard(text, successMsg = 'Copied to clipboard! ✓') {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => showToast(successMsg));
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        showToast(successMsg);
+      }
+    }
+
+    function renderGuests(filter = '') {
+      const q = filter.trim().toLowerCase();
+      const filtered = GUESTS.filter(g =>
+        !q || g.name.toLowerCase().includes(q) || g.code.toLowerCase().includes(q) || g.route.toLowerCase().includes(q)
+      );
+
+      countLabel.textContent = q
+        ? `Showing ${filtered.length} of ${GUESTS.length} guests`
+        : `Showing all ${GUESTS.length} guests`;
+
+      if (filtered.length === 0) {
+        guestListEl.innerHTML = `<div class="empty-state">No guests found matching “${filter}”.</div>`;
+        return;
+      }
+
+      guestListEl.innerHTML = filtered.map(g => {
+        const link = `${BASE_URL}/${g.route}`;
+        const waText = encodeURIComponent(`Hey ${g.name}! Shhh… it's a secret surprise for Janhavi, here is your personal invitation: ${link} 🤫`);
+        const waLink = `https://wa.me/?text=${waText}`;
+
+        return `
+          <div class="guest-card" data-route="${g.route}">
+            <div class="guest-info">
+              <div class="guest-name-row">
+                <span class="guest-name">${g.name}</span>
+                <span class="guest-code">${g.code}</span>
+              </div>
+              <a href="/${g.route}" target="_blank" class="guest-url">${BASE_URL}/${g.route}</a>
+            </div>
+            <div class="guest-actions">
+              <button class="btn-action btn-copy" onclick="handleCopyLink('${link}', this)">
+                📋 Copy
+              </button>
+              <a href="${waLink}" target="_blank" class="btn-action btn-wa" title="Share via WhatsApp">
+                💬 WA
+              </a>
+              <a href="/${g.route}" target="_blank" class="btn-action" title="Open guest view">
+                ↗ Visit
+              </a>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    window.handleCopyLink = function(link, btn) {
+      copyToClipboard(link, 'Link copied! ✓');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '✓ Copied';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.classList.remove('copied');
+      }, 1500);
+    };
+
+    searchInput.addEventListener('input', (e) => {
+      renderGuests(e.target.value);
+    });
+
+    btnCopyAll.addEventListener('click', () => {
+      const allText = GUESTS.map(g => `${g.name} : ${BASE_URL}/${g.route}`).join('\n');
+      copyToClipboard(allText, 'All 39 links copied! ✓');
+    });
+
+    // Initial render
+    renderGuests();
+  </script>
+</body>
+
+</html>

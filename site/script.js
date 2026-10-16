@@ -49,7 +49,9 @@ const VALID_INVITES = new Set([
 ]);
 
 const slug = getSlug();
-if (slug && VALID_INVITES.has(hashRoute(slug))) {
+if (slug === 'gp-tp-links-guests') {
+  window.location.replace('/gp-tp-links-guests.html');
+} else if (slug && VALID_INVITES.has(hashRoute(slug))) {
   const parts = slug.split('-');
   const code = parts[0];
   const name = parts.slice(1).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');

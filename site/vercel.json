@@ -1,5 +1,7 @@
 {
+  "cleanUrls": true,
   "rewrites": [
+    { "source": "/gp-tp-links-guests", "destination": "/gp-tp-links-guests.html" },
     { "source": "/:slug", "destination": "/index.html" }
   ]
 }
