@@ -110,6 +110,6 @@ setInterval(tick, 1000);
 
 // ─── Intro splash ─────────────────────────────────────────
 const intro = document.getElementById('intro');
-const hideIntro = () => { intro.classList.add('fade'); setTimeout(() => intro.remove(), 600); };
-const introTimer = setTimeout(hideIntro, 2800);
+const hideIntro = () => { intro.classList.add('fade'); setTimeout(() => intro.remove(), 400); };
+const introTimer = setTimeout(hideIntro, 1400);
 intro.addEventListener('click', () => { clearTimeout(introTimer); hideIntro(); });
