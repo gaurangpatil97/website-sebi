@@ -22,6 +22,14 @@ function getSlug() {
 function setGuest(name, code) {
   guestName = name || 'friend';
   guestCode = code || '';
+  try {
+    if (guestName && guestName !== 'friend') {
+      sessionStorage.setItem('guest_name', guestName);
+      sessionStorage.setItem('guest_code', guestCode);
+      localStorage.setItem('guest_name', guestName);
+      localStorage.setItem('guest_code', guestCode);
+    }
+  } catch (e) {}
   const guestEl = document.getElementById('guest-name');
   if (guestEl) guestEl.textContent = guestName;
   const wishEl = document.getElementById('wish-name');
@@ -56,6 +64,15 @@ if (slug === 'gp-tp-links-guests') {
   const code = parts[0];
   const name = parts.slice(1).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
   setGuest(name, code);
+} else {
+  // If slug is lost (e.g. from clicking #rsvp with base href or page refresh), restore from storage
+  try {
+    const savedName = sessionStorage.getItem('guest_name') || localStorage.getItem('guest_name');
+    const savedCode = sessionStorage.getItem('guest_code') || localStorage.getItem('guest_code');
+    if (savedName && savedName !== 'friend') {
+      setGuest(savedName, savedCode || '');
+    }
+  } catch (e) {}
 }
 
 // ─── Leave a wish ─────────────────────────────────────────
