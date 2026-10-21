@@ -11,7 +11,7 @@ Nabeel : https://janhaviharshin.com/nbl-nabeel
 Shrinks : https://janhaviharshin.com/srk-shrinks
 Swaraj : https://janhaviharshin.com/swr-swaraj
 Adyasha : https://janhaviharshin.com/ady-adyasha
-Atharva Raje : https://janhaviharshin.com/atr-atharva-raje
+Raje : https://janhaviharshin.com/atr-raje
 Kundan : https://janhaviharshin.com/knd-kundan
 Vrinda : https://janhaviharshin.com/vrn-vrinda
 Rijul : https://janhaviharshin.com/rjl-rijul
@@ -21,7 +21,7 @@ Shreya : https://janhaviharshin.com/sry-shreya
 Yash : https://janhaviharshin.com/ysh-yash
 Shruti : https://janhaviharshin.com/srt-shruti
 Aayush : https://janhaviharshin.com/ays-aayush
-Rohan Patil : https://janhaviharshin.com/rhp-rohan-patil
+Rohan : https://janhaviharshin.com/rhp-rohan
 Shivani : https://janhaviharshin.com/shv-shivani
 Matthew : https://janhaviharshin.com/mtw-matthew
 Rochelle : https://janhaviharshin.com/rch-rochelle
@@ -58,7 +58,7 @@ Tanvi : https://janhaviharshin.com/cutie-tanvi
 | 2 | **Shrinks** | `srk` | [`/srk-shrinks`](https://janhaviharshin.com/srk-shrinks) | `https://janhaviharshin.com/srk-shrinks` |
 | 3 | **Swaraj** | `swr` | [`/swr-swaraj`](https://janhaviharshin.com/swr-swaraj) | `https://janhaviharshin.com/swr-swaraj` |
 | 4 | **Adyasha** | `ady` | [`/ady-adyasha`](https://janhaviharshin.com/ady-adyasha) | `https://janhaviharshin.com/ady-adyasha` |
-| 5 | **Atharva Raje** | `atr` | [`/atr-atharva-raje`](https://janhaviharshin.com/atr-atharva-raje) | `https://janhaviharshin.com/atr-atharva-raje` |
+| 5 | **Raje** | `atr` | [`/atr-raje`](https://janhaviharshin.com/atr-raje) | `https://janhaviharshin.com/atr-raje` |
 | 6 | **Kundan** | `knd` | [`/knd-kundan`](https://janhaviharshin.com/knd-kundan) | `https://janhaviharshin.com/knd-kundan` |
 | 7 | **Vrinda** | `vrn` | [`/vrn-vrinda`](https://janhaviharshin.com/vrn-vrinda) | `https://janhaviharshin.com/vrn-vrinda` |
 | 8 | **Rijul** | `rjl` | [`/rjl-rijul`](https://janhaviharshin.com/rjl-rijul) | `https://janhaviharshin.com/rjl-rijul` |
@@ -68,7 +68,7 @@ Tanvi : https://janhaviharshin.com/cutie-tanvi
 | 12 | **Yash** | `ysh` | [`/ysh-yash`](https://janhaviharshin.com/ysh-yash) | `https://janhaviharshin.com/ysh-yash` |
 | 13 | **Shruti** | `srt` | [`/srt-shruti`](https://janhaviharshin.com/srt-shruti) | `https://janhaviharshin.com/srt-shruti` |
 | 14 | **Aayush** | `ays` | [`/ays-aayush`](https://janhaviharshin.com/ays-aayush) | `https://janhaviharshin.com/ays-aayush` |
-| 15 | **Rohan Patil** | `rhp` | [`/rhp-rohan-patil`](https://janhaviharshin.com/rhp-rohan-patil) | `https://janhaviharshin.com/rhp-rohan-patil` |
+| 15 | **Rohan** | `rhp` | [`/rhp-rohan`](https://janhaviharshin.com/rhp-rohan) | `https://janhaviharshin.com/rhp-rohan` |
 | 16 | **Shivani** | `shv` | [`/shv-shivani`](https://janhaviharshin.com/shv-shivani) | `https://janhaviharshin.com/shv-shivani` |
 | 17 | **Matthew** | `mtw` | [`/mtw-matthew`](https://janhaviharshin.com/mtw-matthew) | `https://janhaviharshin.com/mtw-matthew` |
 | 18 | **Rochelle** | `rch` | [`/rch-rochelle`](https://janhaviharshin.com/rch-rochelle) | `https://janhaviharshin.com/rch-rochelle` |

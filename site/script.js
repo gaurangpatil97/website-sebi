@@ -49,8 +49,8 @@ function hashRoute(s) {
 }
 
 const VALID_INVITES = new Set([
-  '1iqleyd','srav5w','1ylp02e','1fuz7sb','2e6qq7','1jbi8i8','75j964','13uilk0',
-  '1ksm65q','1ot250x','cfian0','1d6p3ob','13tjpey','qhftuy','etbim3','hr012t',
+  '1iqleyd','srav5w','1ylp02e','1fuz7sb','1uf63nf','1jbi8i8','75j964','13uilk0',
+  '1ksm65q','1ot250x','cfian0','1d6p3ob','13tjpey','qhftuy','1t7khec','hr012t',
   '1s700zo','p2ib5p','epv3jg','au4buf','ir4ttu','1bbh2oh','17uimg7','1767ytz',
   '1gmn7vr','1g5kj79','1skqflp','ab99fd','1muvnzx','t82aln','11lleta','g3zbh',
   '25bl2p','14xy21m','6gnazo','1dlcqbw','9st2wo','18lqwlc','1njin0u'
@@ -59,6 +59,10 @@ const VALID_INVITES = new Set([
 const slug = getSlug();
 if (slug === 'gp-tp-links-guests') {
   window.location.replace('/gp-tp-links-guests.html');
+} else if (slug === 'atr-atharva-raje') {
+  window.location.replace('/atr-raje');
+} else if (slug === 'rhp-rohan-patil') {
+  window.location.replace('/rhp-rohan');
 } else if (slug && VALID_INVITES.has(hashRoute(slug))) {
   const parts = slug.split('-');
   const code = parts[0];
